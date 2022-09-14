@@ -9,7 +9,7 @@ function App() {
   const now = new Date()
   const day = days[ now.getDay() ];
   return (
-    <div className="app">
+    <div  className="app">
       <div className="mainHeading">
         <h1>ToDo List</h1>
       </div>
@@ -42,7 +42,7 @@ function App() {
       <div className="todos">
         {toDos.map((obj) => {
           return (
-            <div className={obj.status ? 'todo active' : "todo"}>
+            <div key={obj.id} className={obj.status ? 'todo active' : "todo"}>
               <div  className="left">
                 <input onChange={(e)=>{
                   setToDos(toDos.filter(obj2 =>{
